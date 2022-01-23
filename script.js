@@ -67,7 +67,7 @@ class LinkList {
     if (index < 0 && index > this.size) return;
     let current = this.head;
 
-    if (index === 0) return (this.head = current.next);
+    if (index === 0) return this.removeFirst();
 
     let previous;
     let count = 0;
@@ -98,6 +98,12 @@ class LinkList {
     return current.data;
   }
 
+  removeFirst() {
+    let current = this.head;
+    this.head = current.next;
+    this.size--;
+  }
+
   print() {
     let current = this.head;
     let arr = [];
@@ -118,6 +124,8 @@ demo.addLast(23);
 demo.insertAt(24, 2);
 // demo.getAt(100);
 demo.removeAt(1);
+demo.removeFirst();
+// demo.removeLast();
 // demo.clear();
 
 demo.print();
