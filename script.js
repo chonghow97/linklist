@@ -84,6 +84,10 @@ class LinkList {
     this.size = 0;
   }
 
+  getFirst() {
+    return this.head.data;
+  }
+
   print() {
     let current = this.head;
     let arr = [];
@@ -102,9 +106,10 @@ demo.addFirst(2);
 demo.addFirst(13);
 demo.addLast(23);
 demo.insertAt(24, 2);
-demo.getAt(100);
+// demo.getAt(100);
 demo.removeAt(1);
+// demo.clear();
 
 demo.print();
 
-// console.log(demo);
+console.log(demo.getFirst());
