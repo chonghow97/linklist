@@ -88,6 +88,14 @@ class LinkList {
     return this.head.data;
   }
 
+  getLast() {
+    let current = this.head;
+    while (current.next) {
+      current = current.next;
+    }
+    return current.data;
+  }
+
   print() {
     let current = this.head;
     let arr = [];
@@ -112,4 +120,4 @@ demo.removeAt(1);
 
 demo.print();
 
-console.log(demo.getFirst());
+console.log(demo.getLast());
