@@ -81,6 +81,7 @@ class LinkList {
 
   clear() {
     this.head = null;
+    this.size = 0;
   }
 
   print() {
