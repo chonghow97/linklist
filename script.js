@@ -46,6 +46,7 @@ class LinkList {
 
     node.next = current;
     previous.next = node;
+    this.size++;
   }
 
   getAt(index) {
@@ -77,6 +78,7 @@ class LinkList {
       current = current.next;
     }
     previous.next = current.next;
+    this.size--;
   }
 
   clear() {
@@ -120,4 +122,4 @@ demo.removeAt(1);
 
 demo.print();
 
-console.log(demo.getLast());
+console.log(demo.getLast(), demo.size);
