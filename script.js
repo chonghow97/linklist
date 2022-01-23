@@ -105,17 +105,7 @@ class LinkList {
   }
 
   removeLast() {
-    let previous;
-    let count = 0;
-    let current = this.head;
-
-    while (count < this.size) {
-      count++;
-      previous = current;
-      current = current.next;
-    }
-    previous.next = current.next;
-    this.size--;
+    this.removeAt(this.size);
   }
 
   print() {
