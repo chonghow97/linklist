@@ -104,6 +104,20 @@ class LinkList {
     this.size--;
   }
 
+  removeLast() {
+    let previous;
+    let count = 0;
+    let current = this.head;
+
+    while (count < this.size) {
+      count++;
+      previous = current;
+      current = current.next;
+    }
+    previous.next = current.next;
+    this.size--;
+  }
+
   print() {
     let current = this.head;
     let arr = [];
@@ -125,7 +139,7 @@ demo.insertAt(24, 2);
 // demo.getAt(100);
 demo.removeAt(1);
 demo.removeFirst();
-// demo.removeLast();
+demo.removeLast();
 // demo.clear();
 
 demo.print();
