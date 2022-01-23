@@ -79,6 +79,10 @@ class LinkList {
     previous.next = current.next;
   }
 
+  clear() {
+    this.head = null;
+  }
+
   print() {
     let current = this.head;
     let arr = [];
